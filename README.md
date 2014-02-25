@@ -49,8 +49,8 @@ A Little Deeper
 
 These functions take an arbitrary and unlimited number of arguments. Each argument will be interpreted differently based on it's type:
 
-*Object*  An object whose keys represent html attributes and whose values contain the values of those attributes.
-"DOM Element"  Adds a DOM element as a child node of the current element. All nodes occur in the order they appear in the arguments.
+*Object*  An object whose keys represent html attributes and whose values contain the values of those attributes.<br/>
+*DOM Element*  Adds a DOM element as a child node of the current element. All nodes occur in the order they appear in the arguments.<br/>
 *String, Number, and everything else*  Adds a text node as a child of the current element. All nodes occur in the order they appear in the arguments.
 
 
