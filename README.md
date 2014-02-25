@@ -25,7 +25,7 @@ myArticle = frag(
 			);
 </pre>
 
-This generates a document fragment which contains a <div/> with two <p/> tags, one of which has an <a/> tag in it:
+This generates a document fragment which contains a &lt;div/&gt; with two &lt;p/&gt; tags, one of which has an &lt;a/&gt; tag in it:
 
 <pre>
 &lt;div class="article"&gt;
