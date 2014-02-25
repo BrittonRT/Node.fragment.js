@@ -28,10 +28,10 @@ myArticle = frag(
 This generates a document fragment which contains a <div/> with two <p/> tags, one of which has an <a/> tag in it:
 
 <pre>
-<div class="article">
-	<p>This is an article</p>
-	<p style="color:red">This is red text <a href="http://google.com" target="_blank">This is a link to google.com</a></p>
-</div>
+&lt;div class="article"&gt;
+	&lt;p&gt;This is an article&lt;/p&gt;
+	&lt;p style="color:red"&gt;This is red text &lt;a href="http://google.com" target="_blank"&gt;This is a link to google.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 </pre>
 
 The returned object is a reference to a normal document fragment, so you can simply add it to any element you wish:
