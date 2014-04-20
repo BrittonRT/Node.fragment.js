@@ -79,7 +79,7 @@ Node.createShortcuts('_');
 
 // These are now the same
 _p()
-Node.p())
+Node.p()
 
 // These are now the same
 _fragment()
