@@ -65,7 +65,7 @@ Node.createShortcuts();
 
 // These are now the same
 p()
-Node.p())
+Node.p()
 
 // These are now the same
 fragment()

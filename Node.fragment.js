@@ -56,5 +56,6 @@
 				window[prefix+tag] = Node[tag];
 			})(elems[i]);
 		};
+		window[prefix+'fragment'] = Node.fragment;
 	}
 })(Node);
