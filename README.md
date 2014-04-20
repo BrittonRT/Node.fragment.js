@@ -1,22 +1,22 @@
-frag.js
+Node.fragment.js
 =======
 
 A very simple DOM library for Javascript.
 
-This library adds a function for each valid HTML5 DOM element. Calling one of these functions generates a DOM element of the appropriate type and returns it. It also adds a frag() function which creates and returns document fragments.
+This library extends the Node object (which is the type of all HTML Dom elements), adding a method for each valid HTML5 DOM element. Calling one of these functions generates a DOM element of the appropriate type and returns it. It also adds a Node.fragment() function which creates and returns document fragments.
 
 
 Basic Usage
 -----------
 <pre>
-myArticle = frag(
-				div(
+myArticle = Node.fragment(
+				Node.div(
 					{ class: 'article' },
-					p('This is an article'),
-					p(
+					Node.p('This is an article'),
+					Node.p(
 						{ style: 'color:red' },
 						'This is red text ',
-						a(
+						Node.a(
 							{ href: 'http://google.com', target: '_blank' },
 							'This is a link to google.com'
 						)
@@ -44,6 +44,7 @@ $('body').append(myArticle);
 </pre>
 
 
+
 A Little Deeper
 ---------------
 
@@ -52,6 +53,38 @@ These functions take an arbitrary and unlimited number of arguments. Each argume
 *Object*  An object whose keys represent html attributes and whose values contain the values of those attributes.<br/>
 *DOM Element*  Adds a DOM element as a child node of the current element. All nodes occur in the order they appear in the arguments.<br/>
 *String, Number, and everything else*  Adds a text node as a child of the current element. All nodes occur in the order they appear in the arguments.
+
+
+Advanced Usage
+--------------
+
+You can also call the Node.createShortcuts() method to generate global shortcut functions:
+
+<pre>
+Node.createShortcuts();
+
+// These are now the same
+p()
+Node.p())
+
+// These are now the same
+fragment()
+Node.fragment()
+</pre>
+
+Additionally, you can pass in an optional argument "prefix", which is prepended to the generated function names:
+
+<pre>
+Node.createShortcuts('_');
+
+// These are now the same
+_p()
+Node.p())
+
+// These are now the same
+_fragment()
+Node.fragment()
+</pre>
 
 
 Performance
@@ -64,4 +97,4 @@ Known Issues
 ------------
 
 - No support for older browsers. If you require such support, <a href="http://jquery.com" target="_blank">jQuery</a> is probably your best bet.
-- Clutters the window namespace with a function for each valid html DOM element. This is by design, but as a result the "var" tag cannot be used currently.
+- Using the optional shortcuts clutters the window namespace with a function for each valid html DOM element. This is by design, but as a result the "var" tag cannot be used as a shortcut without adding a prefix.
